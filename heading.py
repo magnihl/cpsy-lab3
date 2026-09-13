@@ -24,7 +24,7 @@ while True:
     mx = mx - OFF_X
     my = my - OFF_Y
     mz = mz - OFF_Z
-    heading = math.degrees(math.atan2(my, mx)) % 360
+    heading = math.degrees(math.atan2(mx, my)) % 360
 
     print(f"heading {heading:6.1f}   mx {mx:6.1f}  my {my:6.1f}")
     time.sleep(0.5)
