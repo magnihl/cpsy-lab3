@@ -15,7 +15,7 @@ from gpiozero import LED
 
 # level, degrees of tilt
 LEVEL_ON = 4.0
-LEVEL_OFF = 6.0
+LEVEL_OFF = 8.0
 
 # north, degrees away from 0
 NORTH_ON = 10.0
