@@ -26,7 +26,7 @@ OFF_X = 2.4
 OFF_Y = 28.7
 
 # rotate the zero onto the IMU edge
-FRONT = 180
+FRONT = 0
 
 i2c = busio.I2C(board.SCL, board.SDA)
 icm = adafruit_icm20x.ICM20948(i2c, address=0x69)
