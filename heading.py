@@ -12,8 +12,8 @@ import board
 import busio
 
 # hard iron offsets
-OFF_X = 0.0
-OFF_Y = 27.0
+OFF_X = 2.4
+OFF_Y = 28.7
 OFF_Z = 0.4
 
 # rotate the zero onto the IMU edge
