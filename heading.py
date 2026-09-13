@@ -14,7 +14,10 @@ import busio
 # hard iron offsets
 OFF_X = 0.0
 OFF_Y = 27.0
-OFF_Z = 0.4 
+OFF_Z = 0.4
+
+# rotate the zero onto the IMU edge
+FRONT = 180
 
 i2c = busio.I2C(board.SCL, board.SDA)
 icm = adafruit_icm20x.ICM20948(i2c, address=0x69)
@@ -24,7 +27,7 @@ while True:
     mx = mx - OFF_X
     my = my - OFF_Y
     mz = mz - OFF_Z
-    heading = math.degrees(math.atan2(mx, my)) % 360
+    heading = (math.degrees(math.atan2(mx, my)) + FRONT) % 360
 
     print(f"heading {heading:6.1f}   mx {mx:6.1f}  my {my:6.1f}")
     time.sleep(0.5)
